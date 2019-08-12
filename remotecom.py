@@ -73,7 +73,7 @@ while True:
         # ADCから値を取得
         inputVal = readadc(0, SPICLK, SPIMOSI, SPIMISO, SPICS)
 
-        if(inputVal > 3640):
+        if(inputVal == 4095):
             message = {'message': "インターフォンが押されました。"}
             res = requests.post(url, data=message, headers=my_headers)  # Post for LINE Notify
             print(res)
