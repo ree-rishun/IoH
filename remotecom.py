@@ -78,7 +78,7 @@ while True:
             res = requests.post(url, data=message, headers=my_headers)  # Post for LINE Notify
             print(res)
             time.sleep(5)
-        time.sleep(3)
+        time.sleep(0.1)
 
     except (KeyboardInterrupt, SystemExit):
         exit()
